@@ -1,0 +1,815 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-neon: #0ff;
+    --secondary-neon: #f0f;
+    --background-dark: #0a0a0a;
+    --card-dark: #111;
+    --text-light: #fff;
+    --text-grey: #888;
+    --neon-shadow: 0 0 10px rgba(0, 255, 255, 0.5),
+                   0 0 20px rgba(0, 255, 255, 0.3),
+                   0 0 30px rgba(0, 255, 255, 0.1);
+    --neon-shadow-pink: 0 0 10px rgba(255, 0, 255, 0.5),
+                       0 0 20px rgba(255, 0, 255, 0.3),
+                       0 0 30px rgba(255, 0, 255, 0.1);
+}
+
+body {
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    background-color: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+.logo h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    animation: neonPulse 2s infinite;
+}
+
+.logo span {
+    color: var(--primary-neon);
+    text-shadow: var(--neon-shadow);
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+nav ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-neon);
+    transition: width 0.3s ease;
+    box-shadow: var(--neon-shadow);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Main Section */
+.main {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+
+.mainText {
+    flex: 1;
+}
+
+.mainText h3 {
+    font-size: 1.5rem;
+    color: var(--text-grey);
+    margin-bottom: 10px;
+}
+
+.mainText h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.mainText span {
+    color: var(--primary-neon);
+    text-shadow: var(--neon-shadow);
+}
+
+.mainText p {
+    font-size: 1.8rem;
+    color: var(--text-grey);
+    margin-bottom: 30px;
+}
+
+#cvBtn {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    background: transparent;
+    border: 2px solid var(--primary-neon);
+    color: var(--primary-neon);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: var(--neon-shadow);
+}
+
+#cvBtn:hover {
+    background: var(--primary-neon);
+    color: var(--background-dark);
+}
+
+.main img {
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: var(--neon-shadow);
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+/* About Section */
+.aboutus {
+    padding: 100px 0;
+}
+
+.head {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.head h1 {
+    font-size: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.head h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--primary-neon);
+    box-shadow: var(--neon-shadow);
+}
+
+.head span {
+    color: var(--primary-neon);
+    text-shadow: var(--neon-shadow);
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about img {
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: var(--neon-shadow);
+}
+
+.aboutText h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.aboutText span {
+    color: var(--primary-neon);
+    text-shadow: var(--neon-shadow);
+}
+
+.aboutText p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--text-grey);
+}
+
+/* Services Section */
+.services {
+    padding: 100px 0;
+    background-color: rgba(0, 255, 255, 0.02);
+}
+
+.service {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--card-dark);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--neon-shadow);
+}
+
+.card i {
+    font-size: 3rem;
+    color: var(--primary-neon);
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: var(--text-grey);
+    line-height: 1.7;
+}
+
+/* Works Section */
+.works {
+    padding: 100px 0;
+}
+
+.myWorks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.workCard {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.workCard:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--neon-shadow);
+}
+
+.workCard img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.workCard p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--text-light);
+    text-align: center;
+}
+
+/* Contact Section */
+.connect {
+    padding: 100px 0;
+    background-color: rgba(0, 255, 255, 0.02);
+}
+
+.contact {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: var(--card-dark);
+    border-radius: 15px;
+    border: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+.contact p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--text-grey);
+}
+
+.contact input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 255, 255, 0.1);
+    border-radius: 5px;
+    color: var(--text-light);
+    transition: all 0.3s ease;
+}
+
+.contact input:focus {
+    outline: none;
+    border-color: var(--primary-neon);
+    box-shadow: var(--neon-shadow);
+}
+
+#submit {
+    width: 100%;
+    padding: 15px;
+    background: transparent;
+    border: 2px solid var(--primary-neon);
+    color: var(--primary-neon);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    box-shadow: var(--neon-shadow);
+}
+
+#submit:hover {
+    background: var(--primary-neon);
+    color: var(--background-dark);
+}
+
+/* Footer */
+.footer {
+    padding: 50px 0;
+    text-align: center;
+    border-top: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+.footer .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer .text h3 {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--primary-neon);
+    text-shadow: var(--neon-shadow);
+}
+
+/* Animations */
+@keyframes neonPulse {
+    0%, 100% {
+        text-shadow: var(--neon-shadow);
+    }
+    50% {
+        text-shadow: none;
+    }
+}
+
+@keyframes floatImage {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .main {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mainText h1 {
+        font-size: 3rem;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .fa-bars {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--text-light);
+    }
+}
+
+@media (max-width: 768px) {
+    .mainText h1 {
+        font-size: 2.5rem;
+    }
+
+    .mainText p {
+        font-size: 1.5rem;
+    }
+
+    .head h1 {
+        font-size: 2.5rem;
+    }
+
+    .aboutText h2 {
+        font-size: 2rem;
+    }
+
+    .main img, .about img {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mainText h1 {
+        font-size: 2rem;
+    }
+
+    .mainText p {
+        font-size: 1.2rem;
+    }
+
+    .head h1 {
+        font-size: 2rem;
+    }
+
+    .aboutText h2 {
+        font-size: 1.8rem;
+    }
+
+    .main img, .about img {
+        max-width: 250px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .footer .text h3 {
+        gap: 15px;
+    }
+
+    .footer a {
+        font-size: 1.2rem;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-neon);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-neon);
+}
+
+/* Selection Style */
+::selection {
+    background: var(--primary-neon);
+    color: var(--background-dark);
+}
+
+/* Additional Hover Effects */
+.service .card:hover i {
+    animation: neonPulse 2s infinite;
+}
+
+.workCard:hover img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Loading Animation */
+@keyframes loadingNeon {
+    0% {
+        box-shadow: none;
+    }
+    50% {
+        box-shadow: var(--neon-shadow);
+    }
+    100% {
+        box-shadow: none;
+    }
+}
+
+/* Focus States */
+button:focus, a:focus {
+    outline: 2px solid var(--primary-neon);
+    outline-offset: 2px;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+
+
+
+
+.myWorks {
+    display: flex;  /* Aligns all cards in a row */
+    gap: 30px;  /* Adds space between cards */
+    margin-bottom: 30px;  /* Space below the cards container */
+    overflow-x: auto;  /* Allows horizontal scrolling if the content overflows */
+    padding: 10px 0;  /* Padding for the container */
+    justify-content: flex-start;  /* Aligns cards to the left */
+}
+
+.workCard {
+    flex: 0 0 auto;  /* Prevents cards from shrinking or growing */
+    width: 300px;  /* Defines the width of each card */
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;  /* Smooth transition for hover effects */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);  /* Default shadow for the card */
+}
+
+.workCard:hover {
+    transform: translateY(-10px);  /* Slight upward movement on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);  /* Enhanced shadow on hover */
+}
+
+.workCard img {
+    width: 100%;  /* Ensures image takes full width of the card */
+    height: 200px;  /* Fixed height for the image */
+    object-fit: cover;  /* Ensures the image covers the area without distortion */
+}
+
+.workCard p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.7);  /* Semi-transparent black background */
+    color: white;  /* White text color */
+    text-align: center;  /* Center aligns the text inside the card */
+    font-size: 16px;  /* Font size for the description */
+    font-weight: bold;  /* Makes the text bold */
+}
+
+.myWorks::-webkit-scrollbar {
+    height: 8px;  /* Defines the height of the scrollbar */
+}
+
+.myWorks::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);  /* Scrollbar thumb color */
+    border-radius: 10px;  /* Rounded corners for the scrollbar thumb */
+}
+
+.myWorks::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);  /* Track color */
+    border-radius: 10px;  /* Rounded corners for the scrollbar track */
+}
+
+/* Styles for your .hero section */
+.hero {
+    height: 100vh;
+    background: url("../img/banner.jpg") no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.hero .btn-primary {
+    padding: 10px 25px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 25px;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.hero .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+/* Skills Section Styles */
+.skills {
+    padding: 100px 0;
+    background-color: rgba(0, 255, 255, 0.02);
+}
+
+.skills-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.skill-bar {
+    width: 100%;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.skill-info span {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-light);
+}
+
+.progress-line {
+    position: relative;
+    width: 100%;
+    height: 10px;  /* Increased height for better visibility */
+    background: rgba(255, 255, 255, 0.2);  /* Slightly more visible background */
+    border-radius: 10px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(0, 255, 255, 0.1);
+    overflow: hidden;  /* Ensure the progress bar is within the container */
+}
+
+/* Progress bar color */
+.progress-line span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 10px;
+    background: var(--primary-neon);
+    box-shadow: var(--neon-shadow);
+    transition: width 1s ease-in-out;
+}
+
+/* Set widths for each skill */
+.html {
+    width: 0;  /* Initially set to 0 for animation */
+    animation: html 1s ease-in-out forwards;
+}
+
+.css {
+    width: 0;  /* Initially set to 0 for animation */
+    animation: css 1s ease-in-out forwards;
+}
+
+.javascript {
+    width: 0;  /* Initially set to 0 for animation */
+    animation: javascript 1s ease-in-out forwards;
+}
+
+.react {
+    width: 0;  /* Initially set to 0 for animation */
+    animation: react 1s ease-in-out forwards;
+}
+
+.mongodb {
+    width: 0;  /* Initially set to 0 for animation */
+    animation: mongodb 1s ease-in-out forwards;
+}
+
+.nodejs {
+    width: 0;  /* Initially set to 0 for animation */
+    animation: nodejs 1s ease-in-out forwards;
+}
+
+/* Animations for each skill */
+@keyframes html {
+    0% { width: 0; }
+    100% { width: 80%; }
+}
+
+@keyframes css {
+    0% { width: 0; }
+    100% { width: 80%; }
+}
+
+@keyframes javascript {
+    0% { width: 0; }
+    100% { width: 70%; }
+}
+
+@keyframes react {
+    0% { width: 0; }
+    100% { width: 60%; }
+}
+
+@keyframes mongodb {
+    0% { width: 0; }
+    100% { width: 70%; }
+}
+
+@keyframes nodejs {
+    0% { width: 0; }
+    100% { width: 50%; }
+}
+
+/* Hover effect */
+.skill-bar:hover .progress-line span {
+    filter: brightness(1.3);
+    box-shadow: 0 0 15px var(--primary-neon);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .skills-container {
+        padding: 15px;
+    }
+    
+    .skill-info span {
+        font-size: 14px;
+    }
+    
+    .progress-line {
+        height: 6px;
+    }
+}
+
+/* Optional: Add a subtle pulse animation to the filled bars */
+@keyframes pulse {
+    0% { box-shadow: 0 0 5px var(--primary-neon); }
+    50% { box-shadow: 0 0 15px var(--primary-neon); }
+    100% { box-shadow: 0 0 5px var(--primary-neon); }
+}
+
+.progress-line span:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 12px;
+    width: 2px;
+    background: var(--primary-neon);
+    border-radius: 2px;
+}
