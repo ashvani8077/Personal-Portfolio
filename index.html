@@ -24,7 +24,7 @@
                 <li><a href="#skills">My Skills</a></li>
                 <li><a href="#connect">Contact us</a></li>
             </ul>
-            <i class="fa-solid fa-bars"></i>
+            <i class="ri-menu-line" id="menu-icon"></i>
         </nav>
 
         <div class="main">
@@ -34,7 +34,7 @@
                 <p>FullStack Developer</p>
                 <button id="cvBtn">Download CV</button>
             </div>
-            <img src="myImage.png" alt="">
+            <img src="myImage.png" alt="Ashvani Sharma">
         </div>
         
         <div id="aboutus" class="aboutus">
@@ -42,11 +42,11 @@
                 <h1>About <span>Us</span></h1>
             </div>
             <div class="about">
-                <img src="myImage.png" alt="">
+                <img src="myImage.png" alt="Ashvani Sharma">
                 <div class="aboutText">
                     <h2>Hello I am FullStack <span>Developer</span></h2>
-                    <p>Skills: <span>MERN Stack Developer</span></p>
-                    <p>Email: <span>ashvani.sharma_cs22@gla.ac.in</span></p>
+                    <p>Skills: <span>MERN, AWS Cloud Computing</span></p>
+                    <p>Email: <span><a href="mailto:ashvani8077@gmail.com">ashvani8077@gmail.com</a></span></p>
                     <p>Approach: <span>Building user-centric, high-performance applications.</span></p>
                     <p>Cloud Expertise: <span>AWS, Site-to-Site VPN, Cloud Infrastructure</span></p>
                 </div>
@@ -59,13 +59,13 @@
             </div>
             <div class="service">
                 <div class="card">
-                    <i class="fa-solid fa-code"></i>
+                    <i class="ri-code-s-slash-line"></i>
                     <h3>Website Development</h3>
                     <p>We specialize in building dynamic, user-friendly websites tailored to meet the unique needs of your business. From responsive design to full-stack development, we ensure your website is optimized for both performance and user experience, helping you connect with your audience effectively and drive success.</p>
                 </div>
 
                 <div class="card">
-                    <i class="fa-solid fa-code"></i>
+                    <i class="ri-cloud-line"></i>
                     <h3>Cloud Services</h3>
                     <p>Our cloud services provide scalable solutions that help businesses grow without worrying about infrastructure. We offer cloud migration, management, and optimization services to ensure seamless integration and high performance for your applications, making your systems more agile and cost-effective.</p>
                 </div>
@@ -77,41 +77,57 @@
                 <h1>My <span>Works</span></h1>
             </div>
 
-            <!-- Mini Projects Section -->
             <div class="myWorks">
                 <h2>Mini Projects</h2>
-                <div class="workCard">
-                    <a href="https://guess-number8077.netlify.app/" target="_blank"><img src="guess.png" alt=""></a>
-                    <a href="https://guess-number8077.netlify.app/" target="_blank"><p>Guess Number</p></a>
-                </div>
-
-                <div class="workCard">
-                    <a href="https://bmi8077.netlify.app/" target="_blank"><img src="bmi.jpg" alt=""></a>
-                    <a href="https://bmi8077.netlify.app/" target="_blank"><p>BMI Calculator</p></a>
-                </div>
-
-                <div class="workCard">
-                    <a href="https://pig-game8077.netlify.app/" target="_blank"><img src="pig.jpg" alt=""></a>
-                    <a href="https://pig-game8077.netlify.app/" target="_blank"><p>Pig Game</p></a>
+                <div class="project-container">
+                    <div class="workCard">
+                        <a href="https://guess-number8077.netlify.app/" target="_blank">
+                            <img src="guess.png" alt="Guess Number Project">
+                            <p>Guess Number</p>
+                        </a>
+                    </div>
+                    <div class="workCard">
+                        <a href="https://bmi8077.netlify.app/" target="_blank">
+                            <img src="bmi.jpg" alt="BMI Calculator">
+                            <p>BMI Calculator</p>
+                        </a>
+                    </div>
+                    <div class="workCard">
+                        <a href="https://pig-game8077.netlify.app/" target="_blank">
+                            <img src="pig.jpg" alt="Roll and Play">
+                            <p>Roll and Play</p>
+                        </a>
+                    </div>
+                    <div class="workCard">
+                        <a href="https://github.com/integraminds/gla-rh1" target="_blank">
+                            <img src="meetUp.png" alt="Meetup Website">
+                            <p>Meetup Website</p>
+                        </a>
+                    </div>
+                    <div class="workCard">
+                        <a href="https://us-east-1.console.aws.amazon.com/billing/home?region=ap-south-1#/account" target="_blank">
+                            <img src="siteToSite.png" alt="Site To Site VPN">
+                            <p>Site To Site VPN</p>
+                        </a>
+                    </div>
+                    <div class="workCard">
+                        <a href="https://github.com/ashvani8077/Realtime-Device-Location" target="_blank">
+                            <img src="trackApp.jpg" alt="Realtime Device Location">
+                            <p>Realtime Device Location</p>
+                        </a>
+                    </div>
+                    <div class="workCard">
+                        <a href="https://github.com/ashvani8077/OOP_CarRentalSystem" target="_blank">
+                            <img src="carRental.avif" alt="Car Rental System">
+                            <p>Car Rental System</p>
+                        </a>
+                    </div>
                 </div>
             </div>
 
-            <!-- Minor Projects Section -->
-            <div class="myWorks">
-                <h2>Minor Projects</h2>
-                <div class="workCard">
-                    <img src="meetUp.png" alt="">
-                    <p>Meetup Website</p>
-                </div>
-
-                <div class="workCard">
-                    <img src="siteToSite.png" alt="">
-                    <p>Site To Site VPN</p>
-                </div>
-            </div>
+            
         </div>
 
-        <!-- Added Skills Section -->
         <div id="skills" class="skills">
             <div class="head">
                 <h1>My <span>Skills</span></h1>
@@ -180,10 +196,10 @@
             </div>
             <div class="contact">
                 <p>Email: </p>
-                <input type="email" name="" id="email" placeholder="email">
+                <input type="email" name="email" id="email" placeholder="email">
 
                 <p>Message </p>
-                <input type="email" name="" id="message" placeholder="Type your message....">
+                <textarea name="message" id="message" placeholder="Type your message...."></textarea>
 
                 <button id="submit">Submit</button>
             </div>
@@ -194,13 +210,13 @@
                 <h3>
                     <p>Contact Here</p>
                     
-                    <p><a href="https://www.linkedin.com/in/ashvani-sharma-280364249/"><i class="ri-linkedin-box-fill"></i></a></p>
-                    <p><a href="https://github.com/ashvani8077"><i class="ri-github-fill"></i></a></p>
-                    <p><a href="mailto:ashvani.sharma_cs22@gla.ac.in"><i class="ri-mail-fill"></i></a></p>
-                    <p><a href="tel:+918077719863"><i class="ri-phone-fill"></i></a></p>
-                    <p><a href="https://wa.me/918077719863?text=Hello%20Ashvani,%20I'd%20like%20to%20connect%20with%20you!"><i class="ri-whatsapp-fill"></i></a></p>
-                    <p><a href="https://www.facebook.com/babuashupanditabvpmahakalbhakt"><i class="ri-facebook-circle-fill"></i></a></p>
-                    <p><a href="https://www.instagram.com/i.ashu.k/"><i class="ri-instagram-fill"></i></a></p>
+                    <p><a href="https://www.linkedin.com/in/ashvani-sharma-280364249/" aria-label="LinkedIn"><i class="ri-linkedin-box-fill"></i></a></p>
+                    <p><a href="https://github.com/ashvani8077" aria-label="GitHub"><i class="ri-github-fill"></i></a></p>
+                    <p><a href="mailto:ashvani8077@gmail.com" aria-label="Email"><i class="ri-mail-fill"></i></a></p>
+                    <p><a href="tel:+918077719863" aria-label="Phone"><i class="ri-phone-fill"></i></a></p>
+                    <p><a href="https://wa.me/918077719863?text=Hello%20Ashvani,%20I'd%20like%20to%20connect%20with%20you!" aria-label="WhatsApp"><i class="ri-whatsapp-fill"></i></a></p>
+                    <p><a href="https://www.facebook.com/babuashupanditabvpmahakalbhakt" aria-label="Facebook"><i class="ri-facebook-circle-fill"></i></a></p>
+                    <p><a href="https://www.instagram.com/i.ashu.k/" aria-label="Instagram"><i class="ri-instagram-fill"></i></a></p>
                 </h3>
             </div>
         </div>
@@ -209,3 +225,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+

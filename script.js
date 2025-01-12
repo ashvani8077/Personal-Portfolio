@@ -1,13 +1,12 @@
 document.getElementById('cvBtn').addEventListener('click', function () {
     // Google Drive file ID from the provided link
-    const fileId = '1WbgIfxIni76E5yypw3lDsGK0xXSDTOBb';
+    const fileId = '1lb83zT8sLztgTNa2LMDrrDE3ZNWUF4JA';
     // Direct download URL for the file
     const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
     
     // Redirect to the direct download link
     window.location.href = downloadUrl;
 });
-
 
 
 
